@@ -51,7 +51,7 @@ Content-Disposition: inline;
   <p>result from <code>$ pinger $url</code> @ $(date "$DATE_FORMAT")</p>
 </p>
 EOS
-      )
+    )
 
     echo -e "$email" | /usr/sbin/sendmail -t
   fi
