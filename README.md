@@ -13,6 +13,10 @@ this? Use `pinger notifier` + `cron` to ensure your app is periodically reloaded
 Script uses [pinger](https://github.com/jeffreyiacono/pinger) and assumes
 it's in the PATH (see: [pinger usage](https://github.com/jeffreyiacono/pinger#usage)
 
+## Dependencies
+
+- sendmail
+
 ## Contributing
 
 1. Fork it
