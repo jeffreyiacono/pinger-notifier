@@ -39,7 +39,6 @@ for (( i=0 ; i < 2 ; i++ )) ; do shift ; done
 
 for url in "$@" ; do
   if ! msg=$(pinger $url) ; then
-
     email=$(cat <<EOS
 From: $from
 To: $to
