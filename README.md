@@ -18,7 +18,7 @@ it's in the PATH (see: [pinger usage](https://github.com/jeffreyiacono/pinger#us
 - [pinger](https://github.com/jeffreyiacono/pinger)
 - sendmail
 
-## Installing
+## Installation
 
 First, make sure that [pinger](https://github.com/jeffreyiacono/pinger) is
 installed and accessible:
