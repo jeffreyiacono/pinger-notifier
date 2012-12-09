@@ -15,7 +15,52 @@ it's in the PATH (see: [pinger usage](https://github.com/jeffreyiacono/pinger#us
 
 ## Dependencies
 
+- [pinger](https://github.com/jeffreyiacono/pinger)
 - sendmail
+
+## Installing
+
+First, make sure that [pinger](https://github.com/jeffreyiacono/pinger) is
+installed and accessible:
+
+    $ mkdir ~/src
+    $ mkdir ~/bin
+    $ git clone https://github.com/jeffreyiacono/pinger.git ~/src
+    $ ln -s ~/src/pinger/pinger.sh ~/bin/pinger
+
+Make sure that `~/bin` is in your `PATH`. If it is not, add it.
+
+Next, make sure `sendmail` is installed.
+
+Finally, install `pinger-notifier`:
+
+    $ git clone https://github.com/jeffreyiacono/pinger-notifier.git ~/src
+    $ ln -s ~/src/pinger-notifier/pinger-notifier.sh ~/bin/pinger-notifier
+
+You'll now have `pinger` and `pinger-notifier` accessible from the commandline.
+
+## Cron
+
+To add `pinger-notifier` to cron, you need to ensure that cron knows of your
+installation's location so both utilities are accessible. Often your local
+`bin` will not be in cron's `PATH` by default.
+
+To remedy this you can add a `PATH` specification to your crontab like so:
+
+    # sample crontab
+    PATH=[whatever it defaults to]:/home/your-name/bin
+
+The above will ensure that your local `bin` is available.
+
+To schedule a pinger notifier, you'd add something like the following to your
+crontab:
+
+    # sample crontab continued ...
+    */10 * * * * pinger-notifier from@email.com to@email.com http://some-website.com
+
+With this in place `pinger-notifier` will check _http://some-website.com_ every
+10 minutes and send an email to _to@email.com_ from _from@email.com_ on a
+erroneous (301s or inability to get a 200 response) runs.
 
 ## Contributing
 
