@@ -25,7 +25,7 @@ installed and accessible:
 
     $ mkdir ~/src
     $ mkdir ~/bin
-    $ git clone https://github.com/jeffreyiacono/pinger.git ~/src
+    $ git clone https://github.com/jeffreyiacono/pinger.git ~/src/pinger
     $ ln -s ~/src/pinger/pinger.sh ~/bin/pinger
 
 Make sure that `~/bin` is in your `PATH`. If it is not, add it.
@@ -34,7 +34,7 @@ Next, make sure `sendmail` is installed.
 
 Finally, install `pinger-notifier`:
 
-    $ git clone https://github.com/jeffreyiacono/pinger-notifier.git ~/src
+    $ git clone https://github.com/jeffreyiacono/pinger-notifier.git ~/src/pinger-notifier
     $ ln -s ~/src/pinger-notifier/pinger-notifier.sh ~/bin/pinger-notifier
 
 You'll now have `pinger` and `pinger-notifier` accessible from the commandline.
