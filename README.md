@@ -1,7 +1,7 @@
 ## Why?
 
-Let's say you host a web-app on a cloud application platform (*cough* heroku
-*cough*) and this service periodically unloads your app if there hasn't been any
+Let's say you host a web-app on a cloud application platform (_cough_ heroku
+_cough_) and this service periodically unloads your app if there hasn't been any
 visitors for a given period of time. As a result, a brave visitor will be
 greeted with a terrifying `500` error page, which is no good. So how do we solve
 this? Use `pinger notifier` + `cron` to ensure your app is periodically reloaded.
